@@ -1,0 +1,18 @@
+<section class="bg-black bg-gradient py-5">
+    <div class="container">
+        <div class="row g-4">
+            @for (movie of movies; track movie.id) {
+               <div class="col-md-3">
+                <div class="card h-100 text-bg-dark">
+                    <img [src]="imgPath + movie.poster_path" class="card-img-top w-100" alt="Title">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bold">{{movie.title ?? movie.name}}</h5>              
+                      <p class="card-text fst-italic text-center">{{movie.overview}}</p>
+                    </div>
+                  </div>
+            </div> 
+            }
+        </div>
+    </div>
+</section>
+
